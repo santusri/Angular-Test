@@ -20,10 +20,9 @@ steps:
     npm install
     env
     cd Angular-Universal-OnEB
-    ng add @ng-toolkit/universal
     ng build --prod
     env
-    cd dist
-    zip -r Angular-Universal-OnEB.zip *.*
+    cd /home/ubuntu/DevOps/_work/1/s/dist
+    zip -r Angular-Universal-OnEB.zip *
     
   displayName: 'Angular Build Steps'
