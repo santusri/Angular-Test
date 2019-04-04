@@ -1,0 +1,26 @@
+# Node.js with Angular
+# Build a Node.js project that uses Angular.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- master
+
+pool: Ubuntu-DevOps-Practices
+name: $(TeamProject)_$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '8.x'
+  displayName: 'Build versionized'
+
+- script: |
+    npm install -g @angular/cli
+    npm install
+    ng build --prod
+    env
+    cd /home/ubuntu/DevOps-practices/work-place/1/s/dist
+    zip -r browser.zip *
+    
+  displayName: 'Angular Build Steps'
