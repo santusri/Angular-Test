@@ -19,4 +19,8 @@ steps:
     npm install -g @angular/cli
     npm install
     ng build --prod
+    env
+    cd /home/ubuntu/DevOps-practices/work-place/1/s/dist
+    zip -r browser.zip *
+    
   displayName: 'Angular Build Steps'
