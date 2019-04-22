@@ -20,6 +20,6 @@ steps:
     npm install
     ng build --prod
     env
-    cd /home/ubuntu/US-East-DevOps/work/1/s/dist/apps/fleet
+    cd /home/ubuntu/US-East-DevOps/work/1/s/dist/browser
     zip -r browser.zip *
   displayName: 'Angular Build Steps'
