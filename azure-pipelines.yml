@@ -6,7 +6,7 @@
 trigger:
 - master
 
-pool: Ubuntu-DevOps-Practices
+pool: Default
 name: $(TeamProject)_$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
 
 steps:
@@ -20,6 +20,6 @@ steps:
     npm install
     ng build --prod
     env
-    cd /home/ubuntu/DevOps-practices/work-place/1/s/dist/apps/fleet
+    cd /home/ubuntu/US-East-DevOps/work/1/s/dist/apps/fleet
     zip -r browser.zip *
   displayName: 'Angular Build Steps'
