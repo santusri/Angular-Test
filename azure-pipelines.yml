@@ -6,7 +6,7 @@
 trigger:
 - master
 
-pool: us-east-devops
+pool: default
 name: $(TeamProject)_$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
 
 steps:
